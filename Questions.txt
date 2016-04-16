@@ -1,0 +1,51 @@
+src code to solve the following typical cs problems;
+=====================================================
+
+ 1 Find the most frequent integer in an array
+
+   Answer:  created a hashtable with keys being the values the integer can take
+   	    then I loop through the array, incrementing the values of the key
+	    everytime it appears in the array. Then I find the max value.
+=====================================================
+
+
+ 2 Find pairs in an integer array whose sum is equal to 10 (bonus: do it in linear time)
+   Answer:  this one was easy(not the bonus). Need to 2 for loops. Loop through, ask if
+   	    the sum adds to 10. done.
+=====================================================
+
+ 3 Given 2 integer arrays, determine of the 2nd array is a rotated version of the 1st array. 
+   Ex. Original Array A={1,2,3,5,6,7,8} Rotated Array B={5,6,7,8,1,2,3}
+
+   Answer: 1. the trick, concatenate A with itself: AA
+   	   2. ask is B inside A?
+	      for 1. i used vectors instead of arrays: 
+	      	        //make a concatenated version of origArray
+                        origArray.insert(origArray.end(), origArray.begin(), origArray.end());
+		2. need the "algorithms header"	, includes was the trick here!
+		         if (includes(origArray.begin(), origArray.end(), rotArray.begin(), rotArray.end() ) )
+	    		    cout << "its a rotated array alright" << endl;
+=====================================================
+
+ 4 Write fibbonaci iteratively and recursively (bonus: use dynamic programming)
+   Answer: iteratively: want  x = (x - 1) + (x - 2)
+   	   		      c =    a    +     b
+			in a loop, set b = a
+			     	       a = c
+           recursively:
+		find the base case! f(x) = f(x-1) + f(x - 2)
+		     base case: if x <= 2 return 1
+ =====================================================
+
+ 5 Find the only element in an array that only occurs once.
+
+    Answer:  created a hashtable with keys being the values the integer can take
+   	    then I loop through the array, incrementing the values of the key
+	    everytime it appears in the array. Then I find the min value.
+=====================================================
+
+ 6 Find the common elements of 2 int arrays
+
+=====================================================
+ 7 Given a function rand5() that returns a random int between 0 and 5, implement rand7()
+=====================================================
